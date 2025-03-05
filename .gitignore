@@ -1,0 +1,10 @@
+### CLion ###
+/.idea/
+
+### Project ###
+/build/
+*.out
+*.o
+
+### Project artifacts ###
+main
