@@ -8,3 +8,7 @@
 
 ### Project artifacts ###
 main
+compare
+
+### Default project outputs ###
+approx-comparison.csv
