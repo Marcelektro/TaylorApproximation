@@ -109,8 +109,8 @@ int main(const int argc, char** argv) {
     // print info to console
     printf("Running Taylor series approximation comparison for:\n");
     printf("- Terms: [1..%i]\n", arguments.upperTerms);
-    printf("- Angle range: [%f..%f]\n", arguments.lowerAngle, arguments.upperAngle);
-    printf("- Step size: %f\n", arguments.step);
+    printf("- Angle range: [%.10f..%.10f]\n", arguments.lowerAngle, arguments.upperAngle);
+    printf("- Step size: %.10f\n", arguments.step);
     printf("- Output file: %s\n", arguments.csvFile);
 
     // write csv header
@@ -127,7 +127,7 @@ int main(const int argc, char** argv) {
 
             const double errorAbs = fabs(approxResult - sinResult);
 
-            fprintf(file, "%i,%f,%f,%f,%f\n", terms, radians, approxResult, sinResult, errorAbs);
+            fprintf(file, "%i,%.10f,%.10f,%.10f,%.10f\n", terms, radians, approxResult, sinResult, errorAbs);
         }
     }
 

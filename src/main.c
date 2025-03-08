@@ -101,8 +101,8 @@ int main(const int argc, char** argv) {
 
     printf("approx terms = %i\n", terms);
 
-    printf("approx sin(%f) = %f\n", radians, result);
-    printf("math.h sin(%f) = %f\n", radians, sin(radians));
+    printf("approx sin(%.10f) = %.10f\n", radians, result);
+    printf("math.h sin(%.10f) = %.10f\n", radians, sin(radians));
 
     // handle file output
     if (arguments.csvFile) {
@@ -122,7 +122,7 @@ int main(const int argc, char** argv) {
         FILE* file = fopen(arguments.csvFile, "w");
         if (file) {
             fprintf(file, "radians,approx_terms,approx_result,math.h_value\n");
-            fprintf(file, "%f,%i,%f,%f\n", radians, terms, result, sin(radians));
+            fprintf(file, "%.10f,%i,%.10f,%.10f\n", radians, terms, result, sin(radians));
             fclose(file);
             printf("Result written to %s.\n", arguments.csvFile);
         } else {
